@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Backbone.js PhoneBook</title>
-  <link rel="stylesheet" href="css/todos.css"/>
+  <link rel="stylesheet" href="css/phoneNumbers.css"/>
 </head>
 
 <body>
   
-  <div id="todoapp">
+  <div id="bookapp">
     
     <header>
       <h1>Phone Book</h1>
@@ -38,11 +38,11 @@
     <section id="main">
       <br />
       <label for="toggle-all">&nbsp;Name List</label>
-      <ul id="todo-list"></ul>
+      <ul id="phone-list"></ul>
     </section>
 
     <footer>
-      <div id="todo-count"></div>
+      <div id="phone-count"></div>
     </footer>
     
   </div>
@@ -53,7 +53,7 @@
   
   <div id="credits">
     Created by
-    <a href="http://sala3rectario.com">&Aacute;lvaro Salazar</a>.
+    <a href="http://sala2rectario.com">&Aacute;lvaro Salazar</a>.
   </div>
 
   <script src="lib/json2.js"></script>
@@ -61,7 +61,7 @@
   <script src="lib/underscore-1.3.1.js"></script>
   <script src="lib/backbone.js"></script>
   <script src="lib/backbone-localstorage.js"></script>
-  <script src="todos.js"></script>
+  <script src="PhoneNumbers.js"></script>
 
   <!-- Templates -->
 
@@ -73,7 +73,8 @@
     <div class="edit">
       <label for="name">Name: </label>
       <input id="name" type="text" value="<%= name %>" />
-      <button id="saveButton" type="button">Save data</button>
+      <br />
+        <button id="saveButton" type="button">Save data</button>
     </div>
     <div class="edit">
       <label for="surname">Surname: </label>
@@ -90,7 +91,7 @@
   </script>
 
   <script type="text/template" id="stats-template">
-    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'Phone Number' : 'Phone Numbers' %></div>
+    <div class="phone-count"><b><%= remaining %></b> <%= remaining == 1 ? 'Phone Number' : 'Phone Numbers' %></div>
   </script>
 
   </body>

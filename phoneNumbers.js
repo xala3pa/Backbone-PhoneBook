@@ -19,7 +19,7 @@ $(function(){
       };
     },
 
-    // Ensure that each todo created has `name`, `surName` and `phoneNumber`.
+    // Ensure that each phoneData created has `name`, `surName` and `phoneNumber`.
     initialize: function() {
       if (!this.get("name")) {
         this.set({"name": this.defaults().name});
@@ -32,7 +32,7 @@ $(function(){
       }
     },
 
-    // Remove this Todo from *localStorage* and delete its view.
+    // Remove this phoneData from *localStorage* and delete its view.
     clear: function() {
       this.destroy();
     }
@@ -60,7 +60,7 @@ $(function(){
   // PhoneData Item View
   // --------------
 
-  // The DOM element for a todo item...
+  // The DOM element for a PhoneNumber item...
   var PhoneDataView = Backbone.View.extend({
 
     //... is a list tag.
@@ -101,7 +101,7 @@ $(function(){
       this.inputName.focus();
     },
 
-    // Close the `"editing"` mode, saving changes to the todo.
+    // Close the `"editing"` mode, saving changes to the PhoneNumber.
     close: function() {
       var nameValue = this.inputName.val();
       var surNameValue = this.inputSurName.val();
@@ -125,12 +125,12 @@ $(function(){
   // The Application
   // ---------------
 
-  // Our overall **AppView** is the top-level piece of UI.
+  // Our overall **AppViewt** is the top-level piece of UI.
   var AppView = Backbone.View.extend({
 
     // Instead of generating a new element, bind to the existing skeleton of
     // the App already present in the HTML.
-    el: $("#todoapp"),
+    el: $("#bookapp"),
 
     // Our template for the line of statistics at the bottom of the app.
     statsTemplate: _.template($('#stats-template').html()),
@@ -140,9 +140,9 @@ $(function(){
       "click #new-button":  "create"
     },
 
-    // At initialization we bind to the relevant events on the `Todos`
+    // At initialization we bind to the relevant events on the `phonebooks`
     // collection, when items are added or changed. Kick things off by
-    // loading any preexisting todos that might be saved in *localStorage*.
+    // loading any preexisting phoneNumbers that might be saved in *localStorage*.
     initialize: function() {
 
       this.inputName = this.$("#new-name");
@@ -175,19 +175,19 @@ $(function(){
       }
     },
 
-    // Add a single todo item to the list by creating a view for it, and
+    // Add a single phoneNumber item to the list by creating a view for it, and
     // appending its element to the `<ul>`.
     addOne: function(phoneData) {
       var view = new PhoneDataView({model: phoneData});
-      this.$("#todo-list").append(view.render().el);
+      this.$("#phone-list").append(view.render().el);
     },
 
-    // Add all items in the **Todos** collection at once.
+    // Add all items in the **PhoneBooks** collection at once.
     addAll: function() {
       PhoneBooks.each(this.addOne);
     },
 
-    // If you hit return in the main input field, create new **Todo** model,
+    // If you hit return in the main input field, create new **phoneNumber** model,
     // persisting it to *localStorage*.
     create: function() {
       if (!this.inputName.val() || !this.inputSurName.val() || !this.inputPhoneNumber.val() || !this.inputType.val()) return;

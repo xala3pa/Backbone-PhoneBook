@@ -14,7 +14,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-#todoapp {
+#bookapp {
 	background: #fff;
 	padding: 20px;
 	margin-bottom: 40px;
@@ -30,26 +30,25 @@ body {
 	border-radius: 0 0 5px 5px;
 }
 
-#todoapp h1 {
+#bookapp h1 {
 	font-size: 36px;
 	font-weight: bold;
 	text-align: center;
 	padding: 0 0 10px 0;
 }
 
-#todoapp label {
+#bookapp label {
 	font-size: 26px;
 	font-weight: bold;
 }
 
-#todoapp button {
+#bookapp button {
 	display:block;
-    margin:0 7px 0 0;
+    margin: 0 0px 00px 0;
     background-color:#f5f5f5;
     border:1px solid #dedede;
     border-top:1px solid #eee;
     border-left:1px solid #eee;
-
     font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
     font-size:12px;
     line-height:130%;
@@ -60,15 +59,16 @@ body {
     padding:5px 10px 6px 7px;
 }
 
-#todoapp button:hover {
+#bookapp button:hover {
     background-color:#dff4ff;
     border:1px solid #c2e1ef;
     color:#336699;
 }
 
 
-#todoapp input[type="text"] {
+#bookapp input[type="text"] {
 	width: 366px;
+	margin-left: 20px;
 	font-size: 24px;
 	font-family: inherit;
 	line-height: 1.4em;
@@ -83,7 +83,7 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
 }
 
-#todoapp input::-webkit-input-placeholder {
+#bookapp input::-webkit-input-placeholder {
 	font-style: italic;
 }
 
@@ -92,16 +92,21 @@ body {
 	-moz-box-shadow:    inset 0 0 10px #000000;
    	-webkit-box-shadow: inset 0 0 10px #000000;
    	box-shadow:         inset 0 0 10px #000000;
+   	-webkit-border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-ms-border-radius: 10px 10px 10px 10px;
+	-o-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
 	display: none;
 }
 
-#todo-list {
+#phone-list {
 	margin: 10px 0;
 	padding: 0;
 	list-style: none;
 }
 
-#todo-list li {
+#phone-list li {
 	padding: 18px 20px 18px 0;
 	position: relative;
 	margin: 5px;
@@ -109,16 +114,16 @@ body {
 	border-bottom: 1px inset #cccccc;
 }
 
-#todo-list li:last-child {
+#phone-list li:last-child {
 	border-bottom: none;
 }
 
-#todo-list li.done label {
+#phone-list li.done label {
 	color: #777777;
 	text-decoration: line-through;
 }
 
-#todo-list .destroy {
+#phone-list .destroy {
 	position: absolute;
 	right: 5px;
 	top: 20px;
@@ -129,46 +134,46 @@ body {
 	background: url(../resources/destroy.png) no-repeat;
 }
 
-#todo-list li:hover .destroy {
+#phone-list li:hover .destroy {
   	display: block;
 }
 
-#todo-list .destroy:hover {
+#phone-list .destroy:hover {
   	background-position: 0 -20px;
 }
 
-#todo-list li.editing {
+#phone-list li.editing {
 	border-bottom: none;
 	margin-top: -1px;
 	padding: 0;
 }
 
-#todo-list li.editing:last-child {
+#phone-list li.editing:last-child {
 	margin-bottom: -1px;
 }
 
-#todo-list li.editing .edit {
+#phone-list li.editing .edit {
 	display: block;
 	width: 444px;
 	padding: 13px 15px 14px 20px;
 	margin: 0;
 }
 
-#todo-list li.editing .view {
+#phone-list li.editing .view {
 	display: none;
 }
 
-#todo-list li .view label {
+#phone-list li .view label {
 	word-break: break-word;
 	padding: 13px 15px 14px 20px;
 	margin: 0;
 }
 
-#todo-list li .edit {
+#phone-list li .edit {
 	display: none;
 }
 
-#todoapp footer {
+#bookapp footer {
 	display: none;
 	margin: 0 -20px -20px -20px;
 	overflow: hidden;
@@ -221,7 +226,7 @@ body {
 	top: 1px;
 }
 
-#todo-count span {
+#phone-count span {
 	font-weight: bold;
 }
 

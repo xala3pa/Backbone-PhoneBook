@@ -71,8 +71,8 @@ $(function(){
 
     // The DOM events specific to an item.
     events: {
-      "dblclick .view"   : "edit",
-      "click a.destroy"  : "clear",
+      "dblclick .view"    : "edit",
+      "click a.destroy"   : "clear",
       "click #saveButton" : "close"
     },
 
@@ -190,7 +190,10 @@ $(function(){
     // If you hit return in the main input field, create new **phoneNumber** model,
     // persisting it to *localStorage*.
     create: function() {
-      if (!this.inputName.val() || !this.inputSurName.val() || !this.inputPhoneNumber.val() || !this.inputType.val()) return;
+      if (!this.inputName.val() || !this.inputSurName.val() || !this.inputPhoneNumber.val() || !this.inputType.val()) {
+        $('#myModal').modal({show: true}) 
+        return;
+      }
       PhoneBooks.create({name: this.inputName.val(),surName: this.inputSurName.val(),phoneNumber: this.inputPhoneNumber.val(),type: this.inputType.val()});
       this.inputName.val('');
       this.inputSurName.val('');
